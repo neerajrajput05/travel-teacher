@@ -1,0 +1,65 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter debug_adapter
+
+## exception
+
+FileSystemException: FileSystemException: writeFrom failed, path = '' (OS Error: Broken pipe, errno = 32)
+
+```
+#0      _checkForErrorResponse (dart:io/common.dart:55:9)
+#1      _RandomAccessFile.writeFrom.<anonymous closure> (dart:io/file_impl.dart:885:7)
+#2      _rootRunUnary (dart:async/zone.dart:1407:47)
+<asynchronous suspension>
+#3      _FileStreamConsumer.addStream.<anonymous closure>.<anonymous closure>.<anonymous closure> (dart:io/file_impl.dart:218:21)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 3.24.5, on macOS 14.4 23E214 darwin-x64, locale en-GB)
+    • Flutter version 3.24.5 on channel stable at /usr/local/Caskroom/flutter/3.19.4/flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision dec2ee5c1f (12 days ago), 2024-11-13 11:13:06 -0800
+    • Engine revision a18df97ca5
+    • Dart version 3.5.4
+    • DevTools version 2.37.3
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 34.0.0)
+    • Android SDK at /Users/ashu/Library/Android/sdk
+    • Platform android-34, build-tools 34.0.0
+    • Java binary at: /Applications/Android Studio.app/Contents/jbr/Contents/Home/bin/java
+    • Java version OpenJDK Runtime Environment (build 17.0.9+0-17.0.9b1087.7-11185874)
+    • All Android licenses accepted.
+
+[✓] Xcode - develop for iOS and macOS (Xcode 15.3)
+    • Xcode at /Applications/Xcode.app/Contents/Developer
+    • Build 15E204a
+    • CocoaPods version 1.15.2
+
+[✓] Chrome - develop for the web
+    • Chrome at /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+
+[✓] Android Studio (version 2023.2)
+    • Android Studio at /Applications/Android Studio.app/Contents
+    • Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    • Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    • Java version OpenJDK Runtime Environment (build 17.0.9+0-17.0.9b1087.7-11185874)
+
+[✓] Connected device (3 available)
+    • SM X210 (mobile) • R9ZX409TNQY • android-arm64  • Android 14 (API 34)
+    • macOS (desktop)  • macos       • darwin-x64     • macOS 14.4 23E214 darwin-x64
+    • Chrome (web)     • chrome      • web-javascript • Google Chrome 130.0.6723.59
+    ! Error: Browsing on the local area network for Vinay’s Apple Watch. Ensure the device is unlocked and discoverable via Bluetooth. (code -27)
+
+[✓] Network resources
+    • All expected network resources are available.
+
+• No issues found!
+```
